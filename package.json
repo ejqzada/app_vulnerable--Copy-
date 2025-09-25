@@ -1,0 +1,30 @@
+{
+  "name": "blog-vulnerable",
+  "version": "1.0.0",
+  "description": "Aplicación de blog con vulnerabilidades intencionales para evaluación de seguridad",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.1",
+    "express-rate-limit": "^8.1.0",
+    "express-session": "^1.15.6",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "keywords": [
+    "seguridad",
+    "vulnerabilidades",
+    "evaluación"
+  ],
+  "author": "CIB402",
+  "license": "MIT"
+}

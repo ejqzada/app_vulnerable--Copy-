@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Vulnerable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blog Vulnerable</h1>
+            <nav id="nav-menu">
+                <a href="#" id="home-link">Inicio</a>
+                <a href="#" id="login-link">Iniciar Sesión</a>
+                <a href="#" id="register-link" style="display: none;">Registrarse</a>
+                <a href="#" id="logout-link" style="display: none;">Cerrar Sesión</a>
+                <a href="#" id="create-post-link" style="display: none;">Crear Post</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Sección de login -->
+            <section id="login-section" class="auth-section">
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Usuario:</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Contraseña:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <div id="login-message"></div>
+            </section>
+
+            <!-- Sección de posts -->
+            <section id="posts-section">
+                <h2>Posts Recientes</h2>
+                <div id="posts-container">
+                    <!-- Los posts se cargarán dinámicamente aquí -->
+                </div>
+            </section>
+
+            <!-- Sección de detalle de post -->
+            <section id="post-detail-section" style="display: none;">
+                <button id="back-to-posts">Volver a Posts</button>
+                <div id="post-detail-container">
+                    <!-- El detalle del post se cargará dinámicamente aquí -->
+                </div>
+                
+                <h3>Comentarios</h3>
+                <div id="comments-container">
+                    <!-- Los comentarios se cargarán dinámicamente aquí -->
+                </div>
+                
+                <div id="comment-form-container">
+                    <h4>Agregar Comentario</h4>
+                    <form id="comment-form">
+                        <div class="form-group">
+                            <label for="comment-author">Autor:</label>
+                            <input type="text" id="comment-author" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-content">Comentario:</label>
+                            <textarea id="comment-content" required></textarea>
+                        </div>
+                        <button type="submit">Agregar Comentario</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Sección de crear post -->
+            <section id="create-post-section" style="display: none;">
+                <h2>Crear Nuevo Post</h2>
+                <form id="create-post-form">
+                    <div class="form-group">
+                        <label for="post-title">Título:</label>
+                        <input type="text" id="post-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-content">Contenido:</label>
+                        <textarea id="post-content" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-file">Imagen (opcional):</label>
+                        <input type="file" id="post-file" accept="image/*">
+                    </div>
+                    <button type="submit">Crear Post</button>
+                </form>
+                <div id="create-post-message"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Blog Vulnerable - Evaluación de Seguridad CIB402</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
